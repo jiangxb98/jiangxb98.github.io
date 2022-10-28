@@ -18,4 +18,32 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>Hexo安装教程</title>
+    <url>/2022/10/28/install-hexo/</url>
+    <content><![CDATA[<h1 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a><font size=5>1. 安装</font></h1><ol>
+<li>安装git，<a href="https://www.cnblogs.com/huanhao/p/simplehexoblog.html">下载链接</a></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>安装node.js，<a href="http://nodejs.cn/download/">下载链接</a></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">node -v	# 输出版号则安装和加入环境变量成功</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>安装hexo</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-搭建仓库并建立连接"><a href="#2-搭建仓库并建立连接" class="headerlink" title="2. 搭建仓库并建立连接"></a><font size=5>2. 搭建仓库并建立连接</font></h1><h1 id="3-本地生成博客内容"><a href="#3-本地生成博客内容" class="headerlink" title="3. 本地生成博客内容"></a><font size=5>3. 本地生成博客内容</font></h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s	# 生成本地博客页面</span><br></pre></td></tr></table></figure>
+
+<h1 id="4-发布博客到github"><a href="#4-发布博客到github" class="headerlink" title="4. 发布博客到github"></a><font size=5>4. 发布博客到github</font></h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo d	# 上传到git仓库</span><br></pre></td></tr></table></figure>
+
+<h1 id="5-更改主题"><a href="#5-更改主题" class="headerlink" title="5. 更改主题"></a><font size=5>5. 更改主题</font></h1><p>NexT主题的使用，<a href="https://theme-next.iissnan.com/getting-started.html">官方链接</a></p>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
 </search>

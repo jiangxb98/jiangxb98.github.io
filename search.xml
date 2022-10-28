@@ -66,10 +66,7 @@ href="https://theme-next.iissnan.com/getting-started.html">官方链接</a></p>
     <content><![CDATA[<span id="more"></span>
 <p>参考链接：<a href="https://www.jianshu.com/p/b3e9fb2ad0dc">PNP(pespective-n-point)算法学习笔记</a></p>
 <h1 id="pnp问题简介">PnP问题简介</h1>
-<figure>
-<img src="/2022/10/28/pnp-study/pic1.jpg" alt="pic1">
-<figcaption aria-hidden="true">pic1</figcaption>
-</figure>
+<p><img src="/.io//pic1.jpg"></p>
 <h1 id="pnp问题的可解性">PnP问题的可解性</h1>
 ]]></content>
       <categories>

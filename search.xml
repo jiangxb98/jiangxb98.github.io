@@ -60,4 +60,23 @@ href="https://theme-next.iissnan.com/getting-started.html">官方链接</a></p>
         <tag>教程</tag>
       </tags>
   </entry>
+  <entry>
+    <title>PnP算法学习</title>
+    <url>/2022/10/28/pnp-study/</url>
+    <content><![CDATA[<p>参考链接：<a
+href="https://www.jianshu.com/p/b3e9fb2ad0dc">PNP(pespective-n-point)算法学习笔记</a></p>
+<h1 id="pnp问题简介">PnP问题简介</h1>
+<h1 id="pnp问题的可解性">PnP问题的可解性</h1>
+]]></content>
+      <categories>
+        <category>CV</category>
+        <category>3D</category>
+        <category>Object Detection</category>
+      </categories>
+      <tags>
+        <tag>SLAM</tag>
+        <tag>PnP</tag>
+        <tag>位姿估计</tag>
+      </tags>
+  </entry>
 </search>

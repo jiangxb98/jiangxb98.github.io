@@ -31,12 +31,11 @@
 <meta property="og:image" content="https://jiangxb98.github.io/2022/10/29/weak-and-self-supervision/image-20221029142323274.png">
 <meta property="og:image" content="https://jiangxb98.github.io/2022/10/29/weak-and-self-supervision/image-20221029142403956.png">
 <meta property="og:image" content="https://jiangxb98.github.io/2022/10/29/weak-and-self-supervision/image-20221029143045777.png">
-<meta property="og:image" content="https://jiangxb98.github.io/2022/10/29/weak-and-self-supervision/image-20221029145131533.png">
 <meta property="og:image" content="https://jiangxb98.github.io/2022/10/29/weak-and-self-supervision/image-20221029150031688.png">
 <meta property="og:image" content="https://jiangxb98.github.io/2022/10/29/weak-and-self-supervision/image-20221029145611690.png">
 <meta property="og:image" content="https://jiangxb98.github.io/2022/10/29/weak-and-self-supervision/image-20221029145936254.png">
 <meta property="article:published_time" content="2022-10-29T04:17:55.000Z">
-<meta property="article:modified_time" content="2022-10-29T07:13:15.492Z">
+<meta property="article:modified_time" content="2022-10-29T12:09:57.227Z">
 <meta property="article:author" content="jiangxb">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://jiangxb98.github.io/2022/10/29/weak-and-self-supervision/image-20221029141722439.png">
@@ -336,7 +335,7 @@ mjx-container[display="true"] + br {
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-10-29 12:17:55 / 修改时间：15:13:15" itemprop="dateCreated datePublished" datetime="2022-10-29T12:17:55+08:00">2022-10-29</time>
+              <time title="创建时间：2022-10-29 12:17:55 / 修改时间：20:09:57" itemprop="dateCreated datePublished" datetime="2022-10-29T12:17:55+08:00">2022-10-29</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -434,8 +433,6 @@ Annotations</strong></p>
 Supervised 3D Vehicle Detection 2021</strong></p>
 <p>​ 4.<strong>MAP-Gen: An Automated 3D-Box Annotation Flow with
 Multimodal Attention Point Generator 2022</strong></p>
-<h2 id="启发">启发</h2>
-<p><img src="/2022/10/29/weak-and-self-supervision/image-20221029145131533.png"></p>
 <h1 id="自监督">2.自监督</h1>
 <p>自动为数据产生标签</p>
 <ol type="1">
@@ -565,7 +562,7 @@ Voxel来输入Encoder，然后非对称的Decoder来预测Voxel是否被占用�
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%B1%E7%9B%91%E7%9D%A3"><span class="nav-text">1.弱监督</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%B1%E7%9B%91%E7%9D%A3%E5%88%86%E7%B1%BB"><span class="nav-text">1.1弱监督分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%AE%8C%E5%85%A8%E7%9B%91%E7%9D%A3"><span class="nav-text">1.2不完全监督</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#d%E7%82%B9%E4%BA%91%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2"><span class="nav-text">3D点云语义分割</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#d-box"><span class="nav-text">3D Box</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E7%A1%AE%E5%88%87%E7%9B%91%E7%9D%A3"><span class="nav-text">1.3不确切监督</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E6%A8%A1%E6%80%81"><span class="nav-text">单模态</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#scene-level%E7%9B%91%E7%9D%A33d-box"><span class="nav-text">Scene-level监督3D Box</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#box%E7%9B%91%E7%9D%A3mask%E8%AF%AD%E4%B9%89%E4%BF%A1%E6%81%AF"><span class="nav-text">Box监督mask（语义信息）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E6%A8%A1%E6%80%81%E4%BA%A4%E4%BA%92"><span class="nav-text">多模态交互</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#d%E7%9A%84%E6%A0%87%E7%AD%BEmaskgt%E6%9D%A5%E7%9B%91%E7%9D%A33d%E7%9A%84task"><span class="nav-text">2D的标签(mask、gt)来监督3D的task</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8F%91"><span class="nav-text">启发</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%87%AA%E7%9B%91%E7%9D%A3"><span class="nav-text">2.自监督</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%B1%E7%9B%91%E7%9D%A3"><span class="nav-text">1.弱监督</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%B1%E7%9B%91%E7%9D%A3%E5%88%86%E7%B1%BB"><span class="nav-text">1.1弱监督分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%AE%8C%E5%85%A8%E7%9B%91%E7%9D%A3"><span class="nav-text">1.2不完全监督</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#d%E7%82%B9%E4%BA%91%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2"><span class="nav-text">3D点云语义分割</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#d-box"><span class="nav-text">3D Box</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E7%A1%AE%E5%88%87%E7%9B%91%E7%9D%A3"><span class="nav-text">1.3不确切监督</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E6%A8%A1%E6%80%81"><span class="nav-text">单模态</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#scene-level%E7%9B%91%E7%9D%A33d-box"><span class="nav-text">Scene-level监督3D Box</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#box%E7%9B%91%E7%9D%A3mask%E8%AF%AD%E4%B9%89%E4%BF%A1%E6%81%AF"><span class="nav-text">Box监督mask（语义信息）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E6%A8%A1%E6%80%81%E4%BA%A4%E4%BA%92"><span class="nav-text">多模态交互</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#d%E7%9A%84%E6%A0%87%E7%AD%BEmaskgt%E6%9D%A5%E7%9B%91%E7%9D%A33d%E7%9A%84task"><span class="nav-text">2D的标签(mask、gt)来监督3D的task</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%87%AA%E7%9B%91%E7%9D%A3"><span class="nav-text">2.自监督</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

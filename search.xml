@@ -152,8 +152,6 @@ Annotations</strong></p>
 Supervised 3D Vehicle Detection 2021</strong></p>
 <p>​ 4.<strong>MAP-Gen: An Automated 3D-Box Annotation Flow with
 Multimodal Attention Point Generator 2022</strong></p>
-<h2 id="启发">启发</h2>
-<p><img src="/2022/10/29/weak-and-self-supervision/image-20221029145131533.png"></p>
 <h1 id="自监督">2.自监督</h1>
 <p>自动为数据产生标签</p>
 <ol type="1">

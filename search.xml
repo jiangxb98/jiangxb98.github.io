@@ -46,33 +46,35 @@ you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>. <s
 <h1 id="发布博客到github"><font size="5">4. 发布博客到github</font></h1>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo d	# 上传到git仓库</span><br></pre></td></tr></table></figure>
 <h1 id="更改主题"><font size="5"> 5. 更改主题</font></h1>
-<p>NexT主题的使用，<a href="https://theme-next.iissnan.com/getting-started.html">官方链接</a></p>
+<p>​ NexT主题的使用，<a href="https://theme-next.iissnan.com/getting-started.html">官方链接</a></p>
 <h2 id="修改标签的字体及格式"><font size="4">5.1修改标签的字体及格式</font></h2>
-<p>参考链接：<a href="https://www.jianshu.com/p/d9fbbc7066bf">链接1（花里胡哨）</a>，<a href="https://zhengyujie.github.io/2019/08/20/hexo%E5%BD%A9%E8%89%B2%E6%A0%87%E7%AD%BE/">链接2（推荐）</a></p>
+<p>​ 参考链接：<a href="https://www.jianshu.com/p/d9fbbc7066bf">链接1（花里胡哨）</a>，<a href="https://zhengyujie.github.io/2019/08/20/hexo%E5%BD%A9%E8%89%B2%E6%A0%87%E7%AD%BE/">链接2（推荐）</a></p>
 <h3 id="page页面标签的修改"><font size="4">5.1.1page页面标签的修改</font></h3>
-<p>效果如下图</p>
+<p>​ 效果如下图</p>
 <p><img src="/2022/10/28/install-hexo/image-20221029105607025.png"></p>
 <p>通过修改<code>next\layout\page.swig</code>内PAGE
 BODY下<code>page.type=type</code></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">      &#123;#################&#125;</span><br><span class="line">      &#123;### PAGE BODY ###&#125;</span><br><span class="line">      &#123;#################&#125;</span><br><span class="line">      &lt;div class=&quot;post-body&#123;%- if page.direction and page.direction.toLowerCase() === &#x27;rtl&#x27; %&#125; rtl&#123;%- endif %&#125;&quot;&gt;</span><br><span class="line">        &#123;%- if page.type === &#x27;tags&#x27; %&#125;</span><br><span class="line">          &lt;div class=&quot;tag-cloud&quot;&gt;</span><br><span class="line">            &lt;div class=&quot;tag-cloud-title&quot;&gt;</span><br><span class="line">              &#123;&#123; _p(&#x27;counter.tag_cloud&#x27;, site.tags.length) &#125;&#125;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;tag-cloud-tags&quot; id=&#x27;tags&#x27;&gt;</span><br><span class="line">              &#123;&#123; tagcloud(&#123;</span><br><span class="line">              min_font: 12, </span><br><span class="line">              max_font: 30, </span><br><span class="line">              amount: 200, </span><br><span class="line">              color: true, </span><br><span class="line">              start_color: &#x27;#fff&#x27;, </span><br><span class="line">              end_color: &#x27;#fff&#x27;&#125;) &#125;&#125;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">+       &#123;% include &#x27;tag-color.swig&#x27; %&#125;	# 这个存放的一些渲染代码，与page.swig同级目录</span><br></pre></td></tr></table></figure>
 <p><img src="/2022/10/28/install-hexo/image-20221029110100754.png"></p>
-<p><code>next\layout\tag-color.swig</code>内容如下：</p>
+<p>​ <code>next\layout\tag-color.swig</code>内容如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    var alltags=document.getElementById(&#x27;tags&#x27;);</span><br><span class="line">    var tags=alltags.getElementsByTagName(&#x27;a&#x27;);</span><br><span class="line"></span><br><span class="line">    for (var i = tags.length - 1; i &gt;= 0; i--) &#123;</span><br><span class="line">        var r=Math.floor(Math.random()*75+130);</span><br><span class="line">        var g=Math.floor(Math.random()*75+100);</span><br><span class="line">        var b=Math.floor(Math.random()*75+80);</span><br><span class="line">        tags[i].style.background = &quot;rgb(&quot;+r+&quot;,&quot;+g+&quot;,&quot;+b+&quot;)&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">.tag-cloud a &#123;</span><br><span class="line">    border: 0px;</span><br><span class="line">    padding: 0px 10px;</span><br><span class="line">    border-radius: 10px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-<p>也可以直接粘贴到<code>page.swig</code>对应需要修改的"块"下，下面文章底部标签修改即用的该方式。</p>
+<p>​
+也可以直接粘贴到<code>page.swig</code>对应需要修改的"块"下，下面文章底部标签修改即用的该方式。</p>
 <h3 id="文章底部标签的修改"><font size="4">5.1.2文章底部标签的修改</font></h3>
-<p>修改的<code>post-tags</code>下的格式，效果如下图：</p>
+<p>​ 修改的<code>post-tags</code>下的格式，效果如下图：</p>
 <p><img src="/2022/10/28/install-hexo/image-20221029110714480.png"></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div class=&quot;post-tags&quot; id=&quot;post-tags&quot;&gt;</span><br><span class="line">  &#123;%- for tag in post.tags.toArray() %&#125;</span><br><span class="line">    &lt;a href=&quot;&#123;&#123; url_for(tag.path) &#125;&#125;&quot; rel=&quot;tag&quot;&gt;&#123;&#123; tag_indicate &#125;&#125; &#123;&#123; tag.name &#125;&#125;&lt;/a&gt;</span><br><span class="line">  &#123;%- endfor %&#125;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">var tagsall=document.getElementsByClassName(&quot;post-tags&quot;)</span><br><span class="line">for (var i = tagsall.length - 1; i &gt;= 0; i--)&#123;</span><br><span class="line">  var tags=tagsall[i].getElementsByTagName(&quot;a&quot;);</span><br><span class="line">  for (var j = tags.length - 1; j &gt;= 0; j--) &#123;</span><br><span class="line">    var r=Math.floor(Math.random()*75+130);</span><br><span class="line">    var g=Math.floor(Math.random()*75+100);</span><br><span class="line">    var b=Math.floor(Math.random()*75+80);</span><br><span class="line">    tags[j].style.background = &quot;rgb(&quot;+r+&quot;,&quot;+g+&quot;,&quot;+b+&quot;)&quot;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">.post-tags a &#123;</span><br><span class="line">    border: 0px;</span><br><span class="line">    padding: 0px 10px;</span><br><span class="line">    border-radius: 10px;</span><br><span class="line">    color: rgb(255, 255, 255);</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
 <h2 id="归档页和标签页的美化"><font size="4">5.2归档页和标签页的美化</font></h2>
-<p>目前博客效果参考该<a href="https://jrbcode.gitee.io/posts/be9758cd.html">链接</a></p>
+<p>​ 目前博客效果参考该<a href="https://jrbcode.gitee.io/posts/be9758cd.html">链接</a></p>
 <h2 id="图片的处理"><font size="4">5.3图片的处理</font></h2>
-<p>在Typora中将保存图片的地址修改如下即可</p>
+<p>​ 在Typora中将保存图片的地址修改如下即可</p>
 <p><img src="/2022/10/28/install-hexo/image-20221029112132951.png" style="zoom: 67%;"></p>
-<p>安装插件</p>
+<p>​ 安装插件</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
-<p>修改cofig.yaml的<code>post_asset_folder</code>为true</p>
+<p>​ 修改cofig.yaml的<code>post_asset_folder</code>为true</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure>
-<p>新建博客用<code>hexo new name</code>，新建md文档时会产生一个文件夹，该文件夹就可以存放图片，对应上图中的<code>./$&#123;filename&#125;</code>，会自动把复制的图片放到改文件夹下</p>
+<p>​
+新建博客用<code>hexo new name</code>，新建md文档时会产生一个文件夹，该文件夹就可以存放图片，对应上图中的<code>./$&#123;filename&#125;</code>，会自动把复制的图片放到改文件夹下</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![图片替代文字](img.jpg)</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
@@ -98,5 +100,89 @@ BODY下<code>page.type=type</code></p>
         <tag>PnP</tag>
         <tag>位姿估计</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>weak_and_self_supervision</title>
+    <url>/2022/10/29/weak-and-self-supervision/</url>
+    <content><![CDATA[<h1 id="弱监督">1.弱监督</h1>
+<h2 id="弱监督分类">1.1弱监督分类</h2>
+<ol type="1">
+<li><p>不完全监督</p>
+<p>标签只标注一部分</p></li>
+<li><p>不确切监督</p>
+<p>粗标注，或者跨label的标注</p></li>
+<li><p>不精确监督</p>
+<p>标签中有错误标签</p></li>
+</ol>
+<p>只针对上述的两种做简单介绍</p>
+<h2 id="不完全监督">1.2不完全监督</h2>
+<p>使用少量的标签进行监督训练。局限于单模态的监督训练</p>
+<h3 id="d点云语义分割">3D点云语义分割</h3>
+<p>​ 1.<strong>Image Understands Point Cloud: Weakly Supervised 3D
+Semantic Segmentation via Association Learning</strong></p>
+<p>​ To avoid extensive annotation, we assume <strong>very few labels of
+point clouds are given (<em>e.g.,</em> 1% or fewer),</strong> and each
+category has at least one labeled point. 2D images <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.339ex;" xmlns="http://www.w3.org/2000/svg" width="3.606ex" height="1.339ex" role="img" focusable="false" viewbox="0 -442 1594 592"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"/></g><g data-mml-node="TeXAtom" transform="translate(605,-150) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"/></g><g data-mml-node="mi" transform="translate(500,0)"><path data-c="1D437" d="M287 628Q287 635 230 637Q207 637 200 638T193 647Q193 655 197 667T204 682Q206 683 403 683Q570 682 590 682T630 676Q702 659 752 597T803 431Q803 275 696 151T444 3L430 1L236 0H125H72Q48 0 41 2T33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM703 469Q703 507 692 537T666 584T629 613T590 629T555 636Q553 636 541 636T512 636T479 637H436Q392 637 386 627Q384 623 313 339T242 52Q242 48 253 48T330 47Q335 47 349 47T373 46Q499 46 581 128Q617 164 640 212T683 339T703 469Z"/></g></g></g></g></g></svg></mjx-container></span> are without any annotations.</p>
+<p><img src="/2022/10/29/weak-and-self-supervision/image-20221029141722439.png" style="zoom:67%;"></p>
+<h3 id="d-box">3D Box</h3>
+<p>​ 2.<strong>SS3D: Sparsely-Supervised 3D Object Detection from Point
+Cloud</strong></p>
+<p><img src="/2022/10/29/weak-and-self-supervision/image-20221029142323274.png" style="zoom: 50%;"></p>
+<p>​
+主要实现办法是用高置信度<strong>迭代挖掘</strong>正实例和背景，进一步使用生成的这些数据来训练3D
+detector。</p>
+<p><img src="/2022/10/29/weak-and-self-supervision/image-20221029142403956.png"></p>
+<h2 id="不确切监督">1.3不确切监督</h2>
+<h3 id="单模态">单模态</h3>
+<h4 id="scene-level监督3d-box">Scene-level监督3D Box</h4>
+<p>​ 1.<strong>3D Spatial Recognition without Spatially Labeled
+3D</strong></p>
+<p>​ 仅使用scene-level
+tag进行监督。什么是scene-level的tag？仅表示这个场景下是否存在该类别，不知道在哪、有几个等其他额外信息。</p>
+<h4 id="box监督mask语义信息">Box监督mask（语义信息）</h4>
+<p>​ 2.<strong>BoxInst: High-Performance Instance Segmentation with Box
+Annotations</strong></p>
+<p>​ 由GT Box来监督生成图片的mask。</p>
+<p>​
+作者设计两个loss来监督mask的生成，其中有启发的是使用了相邻像素的颜色相似度。</p>
+<p><img src="/2022/10/29/weak-and-self-supervision/image-20221029143045777.png" style="zoom: 50%;"></p>
+<h3 id="多模态交互">多模态交互</h3>
+<h4 id="d的标签maskgt来监督3d的task">2D的标签(mask、gt)来监督3D的task</h4>
+<p>​ 3.<strong>FGR: Frustum-Aware Geometric Reasoning for Weakly
+Supervised 3D Vehicle Detection 2021</strong></p>
+<p>​ 4.<strong>MAP-Gen: An Automated 3D-Box Annotation Flow with
+Multimodal Attention Point Generator 2022</strong></p>
+<h2 id="启发">启发</h2>
+<p><img src="/2022/10/29/weak-and-self-supervision/image-20221029145131533.png"></p>
+<h1 id="自监督">2.自监督</h1>
+<p>自动为数据产生标签</p>
+<ol type="1">
+<li><p>Pre-training来挖掘数据的关系，然后再用于训练网络进行目标检测等。</p></li>
+<li><p>多视图的数据增强，然后捕获其中的不变性（BOX的几何不变性）一致性损失函数设计。可能基于点，基于proposal，基于voxel等等。</p></li>
+</ol>
+<p>​ 1.<strong>ProposalContrast: Unsupervised Pre-training for
+LiDAR-based 3D Object Detection</strong></p>
+<p><img src="/2022/10/29/weak-and-self-supervision/image-20221029150031688.png" style="zoom: 50%;"></p>
+<ol start="3" type="1">
+<li>自监督训练——mask掉一部分点然后去训练网络学习内部关系
+voxel-mae、mae。</li>
+</ol>
+<p>​ 2.<strong>Voxel-MAE: Masked Autoencoders for Pre-training
+Large-scale Point Clouds</strong></p>
+<p>​ 用Unmasked
+Voxel来输入Encoder，然后非对称的Decoder来预测Voxel是否被占用（二分类问题），Masked和Unmasked的GT都是1，使用交叉熵来计算
+<em>loss</em>。</p>
+<p><img src="/2022/10/29/weak-and-self-supervision/image-20221029145611690.png" style="zoom: 50%;"></p>
+<ol start="4" type="1">
+<li>多模态的自监督—2d box和3d box之间。</li>
+</ol>
+<p><img src="/2022/10/29/weak-and-self-supervision/image-20221029145936254.png"></p>
+]]></content>
+      <categories>
+        <category>CV</category>
+        <category>Review</category>
+        <category>弱监督</category>
+        <category>自监督</category>
+      </categories>
   </entry>
 </search>

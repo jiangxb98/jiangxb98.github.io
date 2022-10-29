@@ -64,6 +64,15 @@ BODY下<code>page.type=type</code></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div class=&quot;post-tags&quot; id=&quot;post-tags&quot;&gt;</span><br><span class="line">  &#123;%- for tag in post.tags.toArray() %&#125;</span><br><span class="line">    &lt;a href=&quot;&#123;&#123; url_for(tag.path) &#125;&#125;&quot; rel=&quot;tag&quot;&gt;&#123;&#123; tag_indicate &#125;&#125; &#123;&#123; tag.name &#125;&#125;&lt;/a&gt;</span><br><span class="line">  &#123;%- endfor %&#125;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">var tagsall=document.getElementsByClassName(&quot;post-tags&quot;)</span><br><span class="line">for (var i = tagsall.length - 1; i &gt;= 0; i--)&#123;</span><br><span class="line">  var tags=tagsall[i].getElementsByTagName(&quot;a&quot;);</span><br><span class="line">  for (var j = tags.length - 1; j &gt;= 0; j--) &#123;</span><br><span class="line">    var r=Math.floor(Math.random()*75+130);</span><br><span class="line">    var g=Math.floor(Math.random()*75+100);</span><br><span class="line">    var b=Math.floor(Math.random()*75+80);</span><br><span class="line">    tags[j].style.background = &quot;rgb(&quot;+r+&quot;,&quot;+g+&quot;,&quot;+b+&quot;)&quot;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">.post-tags a &#123;</span><br><span class="line">    border: 0px;</span><br><span class="line">    padding: 0px 10px;</span><br><span class="line">    border-radius: 10px;</span><br><span class="line">    color: rgb(255, 255, 255);</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
 <h2 id="归档页和标签页的美化"><font size="4">归档页和标签页的美化</font></h2>
 <p>目前博客效果参考该<a href="https://jrbcode.gitee.io/posts/be9758cd.html">链接</a></p>
+<h2 id="图片的处理"><font size="4">图片的处理</font></h2>
+<p>在Typora中将保存图片的地址修改如下即可</p>
+<p><img src="/2022/10/28/install-hexo/image-20221029112132951.png" style="zoom: 67%;"></p>
+<p>安装插件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+<p>修改cofig.yaml的<code>post_asset_folder</code>为true</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure>
+<p>新建博客用<code>hexo new name</code>，新建md文档时会产生一个文件夹，该文件夹就可以存放图片，对应上图中的<code>./$&#123;filename&#125;</code>，会自动把复制的图片放到改文件夹下</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![图片替代文字](img.jpg)</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>Hexo</tag>

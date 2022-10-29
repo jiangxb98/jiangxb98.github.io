@@ -26,7 +26,7 @@ you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>. <s
   <entry>
     <title>Hexo安装教程</title>
     <url>/2022/10/28/install-hexo/</url>
-    <content><![CDATA[<h1 id="安装"><font size="5">1. 安装</font></h1>
+    <content><![CDATA[<h1 id="安装"><font size="5"> 安装</font></h1>
 <ol type="1">
 <li>安装git，<a href="https://www.cnblogs.com/huanhao/p/simplehexoblog.html">下载链接</a></li>
 </ol>
@@ -39,18 +39,34 @@ you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>. <s
 <li>安装hexo</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
-<h1 id="搭建仓库并建立连接"><font size="5">2.
-搭建仓库并建立连接</font></h1>
-<h1 id="本地生成博客内容"><font size="5">3. 本地生成博客内容</font></h1>
+<h1 id="搭建仓库并建立连接"><font size="5">搭建仓库并建立连接</font></h1>
+<h1 id="本地生成博客内容"><font size="5">本地生成博客内容</font></h1>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s	# 生成本地博客页面</span><br></pre></td></tr></table></figure>
-<h1 id="发布博客到github"><font size="5">4. 发布博客到github</font></h1>
+<h1 id="发布博客到github"><font size="5">发布博客到github</font></h1>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo d	# 上传到git仓库</span><br></pre></td></tr></table></figure>
-<h1 id="更改主题"><font size="5">5. 更改主题</font></h1>
+<h1 id="更改主题"><font size="5"> 更改主题</font></h1>
 <p>NexT主题的使用，<a href="https://theme-next.iissnan.com/getting-started.html">官方链接</a></p>
+<h2 id="修改标签的字体及格式"><font size="4">修改标签的字体及格式</font></h2>
+<p>参考链接：<a href="https://www.jianshu.com/p/d9fbbc7066bf">链接1（花里胡哨）</a>，<a href="https://zhengyujie.github.io/2019/08/20/hexo%E5%BD%A9%E8%89%B2%E6%A0%87%E7%AD%BE/">链接2（推荐）</a></p>
+<h3 id="page页面标签的修改"><font size="4">page页面标签的修改</font></h3>
+<p>效果如下图</p>
+<p><img src="/2022/10/28/install-hexo/image-20221029105607025.png"></p>
+<p>通过修改<code>next\layout\page.swig</code>内PAGE
+BODY下<code>page.type=type</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">      &#123;#################&#125;</span><br><span class="line">      &#123;### PAGE BODY ###&#125;</span><br><span class="line">      &#123;#################&#125;</span><br><span class="line">      &lt;div class=&quot;post-body&#123;%- if page.direction and page.direction.toLowerCase() === &#x27;rtl&#x27; %&#125; rtl&#123;%- endif %&#125;&quot;&gt;</span><br><span class="line">        &#123;%- if page.type === &#x27;tags&#x27; %&#125;</span><br><span class="line">          &lt;div class=&quot;tag-cloud&quot;&gt;</span><br><span class="line">            &lt;div class=&quot;tag-cloud-title&quot;&gt;</span><br><span class="line">              &#123;&#123; _p(&#x27;counter.tag_cloud&#x27;, site.tags.length) &#125;&#125;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;tag-cloud-tags&quot; id=&#x27;tags&#x27;&gt;</span><br><span class="line">              &#123;&#123; tagcloud(&#123;</span><br><span class="line">              min_font: 12, </span><br><span class="line">              max_font: 30, </span><br><span class="line">              amount: 200, </span><br><span class="line">              color: true, </span><br><span class="line">              start_color: &#x27;#fff&#x27;, </span><br><span class="line">              end_color: &#x27;#fff&#x27;&#125;) &#125;&#125;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">+       &#123;% include &#x27;tag-color.swig&#x27; %&#125;	# 这个存放的一些渲染代码，与page.swig同级目录</span><br></pre></td></tr></table></figure>
+<p><img src="/2022/10/28/install-hexo/image-20221029110100754.png"></p>
+<p><code>next\layout\tag-color.swig</code>内容如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    var alltags=document.getElementById(&#x27;tags&#x27;);</span><br><span class="line">    var tags=alltags.getElementsByTagName(&#x27;a&#x27;);</span><br><span class="line"></span><br><span class="line">    for (var i = tags.length - 1; i &gt;= 0; i--) &#123;</span><br><span class="line">        var r=Math.floor(Math.random()*75+130);</span><br><span class="line">        var g=Math.floor(Math.random()*75+100);</span><br><span class="line">        var b=Math.floor(Math.random()*75+80);</span><br><span class="line">        tags[i].style.background = &quot;rgb(&quot;+r+&quot;,&quot;+g+&quot;,&quot;+b+&quot;)&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">.tag-cloud a &#123;</span><br><span class="line">    border: 0px;</span><br><span class="line">    padding: 0px 10px;</span><br><span class="line">    border-radius: 10px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<p>也可以直接粘贴到<code>page.swig</code>对应需要修改的"块"下，下面文章底部标签修改即用的该方式。</p>
+<h3 id="文章底部标签的修改"><font size="4">文章底部标签的修改</font></h3>
+<p>修改的<code>post-tags</code>下的格式，效果如下图：</p>
+<p><img src="/2022/10/28/install-hexo/image-20221029110714480.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div class=&quot;post-tags&quot; id=&quot;post-tags&quot;&gt;</span><br><span class="line">  &#123;%- for tag in post.tags.toArray() %&#125;</span><br><span class="line">    &lt;a href=&quot;&#123;&#123; url_for(tag.path) &#125;&#125;&quot; rel=&quot;tag&quot;&gt;&#123;&#123; tag_indicate &#125;&#125; &#123;&#123; tag.name &#125;&#125;&lt;/a&gt;</span><br><span class="line">  &#123;%- endfor %&#125;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">var tagsall=document.getElementsByClassName(&quot;post-tags&quot;)</span><br><span class="line">for (var i = tagsall.length - 1; i &gt;= 0; i--)&#123;</span><br><span class="line">  var tags=tagsall[i].getElementsByTagName(&quot;a&quot;);</span><br><span class="line">  for (var j = tags.length - 1; j &gt;= 0; j--) &#123;</span><br><span class="line">    var r=Math.floor(Math.random()*75+130);</span><br><span class="line">    var g=Math.floor(Math.random()*75+100);</span><br><span class="line">    var b=Math.floor(Math.random()*75+80);</span><br><span class="line">    tags[j].style.background = &quot;rgb(&quot;+r+&quot;,&quot;+g+&quot;,&quot;+b+&quot;)&quot;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">.post-tags a &#123;</span><br><span class="line">    border: 0px;</span><br><span class="line">    padding: 0px 10px;</span><br><span class="line">    border-radius: 10px;</span><br><span class="line">    color: rgb(255, 255, 255);</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="归档页和标签页的美化"><font size="4">归档页和标签页的美化</font></h2>
+<p>目前博客效果参考该<a href="https://jrbcode.gitee.io/posts/be9758cd.html">链接</a></p>
 ]]></content>
       <tags>
-        <tag>hexo</tag>
-        <tag>教程</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>

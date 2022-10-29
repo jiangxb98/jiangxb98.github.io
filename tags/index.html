@@ -210,12 +210,32 @@
       <div class="post-body">
           <div class="tag-cloud">
             <div class="tag-cloud-title">
-              目前共计 5 个标签
+              目前共计 4 个标签
             </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/PnP/" style="font-size: 12px; color: #ccc">PnP</a> <a href="/tags/SLAM/" style="font-size: 12px; color: #ccc">SLAM</a> <a href="/tags/hexo/" style="font-size: 12px; color: #ccc">hexo</a> <a href="/tags/%E4%BD%8D%E5%A7%BF%E4%BC%B0%E8%AE%A1/" style="font-size: 12px; color: #ccc">位姿估计</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 12px; color: #ccc">教程</a>
+            <div class="tag-cloud-tags" id='tags'>
+              <a href="/tags/Hexo/" style="font-size: 12px; color: #fff">Hexo</a> <a href="/tags/PnP/" style="font-size: 12px; color: #fff">PnP</a> <a href="/tags/SLAM/" style="font-size: 12px; color: #fff">SLAM</a> <a href="/tags/%E4%BD%8D%E5%A7%BF%E4%BC%B0%E8%AE%A1/" style="font-size: 12px; color: #fff">位姿估计</a>
             </div>
           </div>
++       <script type="text/javascript">
+    var alltags=document.getElementById('tags');
+    var tags=alltags.getElementsByTagName('a');
+
+    for (var i = tags.length - 1; i >= 0; i--) {
+        var r=Math.floor(Math.random()*75+130);
+        var g=Math.floor(Math.random()*75+100);
+        var b=Math.floor(Math.random()*75+80);
+        tags[i].style.background = "rgb("+r+","+g+","+b+")";
+    }
+</script>
+
+<style>
+.tag-cloud a {
+    border: 0px;
+    padding: 0px 10px;
+    border-radius: 10px;
+}
+</style>
+
         
       </div>
       
@@ -305,7 +325,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -353,16 +373,18 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">1k</span>
+    <span title="站点总字数">3k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1 分钟</span>
+    <span title="站点阅读时长">3 分钟</span>
 </div>
+<!--
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
-  </div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://lib.baomitu.com/canvas-nest.js/1.0.1/canvas-nest.js"></script>
+  </div>
+--><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://lib.baomitu.com/canvas-nest.js/1.0.1/canvas-nest.js"></script>
 
 
         

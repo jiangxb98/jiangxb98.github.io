@@ -5,7 +5,7 @@ main:
     image: ./assets/img/huawei.png
 
   - company: <strong>AMD-AIG</strong>
-    work1: <strong>·</strong> Generation Model for Autonomous Driving
+    # work1: <strong>·</strong> Generation Model for Autonomous Driving
     work2: <strong>·</strong> World Model
     work3: "<strong>·</strong> CVPR 2024 Challenge: MapLess Driving, 5/120; World Model, 7/60"
     work4: <strong>·</strong> 3D Reconstruction (3DGS) for Autonomous Driving

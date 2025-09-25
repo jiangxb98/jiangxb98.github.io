@@ -5,6 +5,8 @@ main:
     conference_short: Arxiv
     # conference: AAAI 2025 (CCF-A)
     pdf: https://arxiv.org/abs/2509.20251
+    page: https://jiangxb98.github.io/PhiGensis/
+    code: https://github.com/LuPaoPao/PhiGensis
     image: ./assets/img/phigen.gif
 
   - title: "You Only Click Once: Single Point Weakly Supervised 3D Instance Segmentation for Autonomous Driving"
@@ -56,7 +58,7 @@ main:
     authors: Hongsi Liu, Jun Liu, <strong>Guangfeng Jiang</strong>, Xin Jin
     conference_short: TITS
     conference: TITS (中科院一区)
-    pdf:https://arxiv.org/pdf/2411.15016
+    pdf: https://arxiv.org/pdf/2411.15016
     image: ./assets/img/mssf.png
 
   - title: "Spatial and Temporal Awareness Network for Semantic Segmentation on Automotive Radar Point Cloud"

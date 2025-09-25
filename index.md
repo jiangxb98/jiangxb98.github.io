@@ -12,7 +12,8 @@ I am a Ph.D. student at University of Science and Technology of China (USTC).
 - **World Model:** World Model, World Model for Planning.
 
 ## News
-
+- **[Sep. 2025]** Our paper 4D generation paper [PhiGenesis](https://arxiv.org/abs/2509.20251) has released.
+- **[Feb. 2025]** Our paper weakly supervised paper [YoCo](https://arxiv.org/abs/2502.19698) has released.
 - **[Dec. 2024]** Our paper [EGSRAL](https://arxiv.org/abs/2412.15550) is accepted to AAAI 2025.
 - **[Dec. 2023]** Our paper [MWSIS](https://arxiv.org/abs/2312.06988) is accepted to AAAI 2024.
 

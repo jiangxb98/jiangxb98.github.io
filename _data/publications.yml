@@ -2,22 +2,15 @@ main:
 
   - title: MWSIS: Multimodal Weakly Supervised Instance Segmentation with 2D Box Annotations for Autonomous Driving
     authors: <strong>Guangfeng Jiang</strong>, Jun Liu\textsuperscript{+}, Yuzhi Wu, Wenlong Liao, Tao He, Pai Peng\textsuperscript{+} (\textsuperscript{+}Corresponding authors)
-    conference_short: AAAI 2024 (CCF-A)
-    # conference: Proceedings of the AAAI Conference on Artificial Intelligence, 2024.
+    conference_short: AAAI
+    conference: AAAI 2024 (CCF-A)
     pdf: https://arxiv.org/abs/2312.06988
-    # code: https://github.com/MrGiovanni/ContinualLearning
     page: https://jiangxb98.github.io/mwsis.github.io/
-    # bibtex: https://bib.yliu.me/MICCAI23.txt
     image: ./assets/img/mwsis.png
-    # notes: Early Accept
 
   - title: MWSIS: Multimodal Weakly Supervised Instance Segmentation with 2D Box Annotations for Autonomous Driving
     authors: Yixiong Huo\textsuperscript{*}, <strong>Guangfeng Jiang\textsuperscript{*}</strong>, Hongyang Wei, Ji Liu, Song Zhang, Han Liu, Xingliang Huang, Mingjie Lu, Jinzhang Peng, Dong Li, Lu Tian, Emad Barsoum\textsuperscript{*} (\textsuperscript{*}Equal contribution)
     conference_short: AAAI 2025 (CCF-A)
-    # conference: Proceedings of the AAAI Conference on Artificial Intelligence, 2024.
+    conference: AAAI 2025 (CCF-A)
     pdf: https://arxiv.org/abs/2412.15550
-    # code: https://github.com/MrGiovanni/ContinualLearning
-    # page: https://jiangxb98.github.io/mwsis.github.io/
-    # bibtex: https://bib.yliu.me/MICCAI23.txt
     image: ./assets/img/egsral.png
-    # notes: Early Accept

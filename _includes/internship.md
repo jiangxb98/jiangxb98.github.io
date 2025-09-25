@@ -50,6 +50,9 @@
       <div class="title">{{ link.company }}</div>
       <div class="author">{{ link.work1 }}</div>
       <div class="author">{{ link.work2 }}</div>
+      <div class="author">{{ link.work3 }}</div>
+      <div class="author">{{ link.work4 }}</div>
+      <div class="author">{{ link.work5 }}</div>
     <div class="links">
       {% if link.pdf %} 
       <a href="{{ link.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>

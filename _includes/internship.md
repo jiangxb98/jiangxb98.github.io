@@ -41,7 +41,9 @@
   <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
     {% if link.image %} 
     <!-- <img src="{{ link.image }}" class="teaser img-fluid z-depth-1" style="width=200;height=40%"> -->
-    <img src="{{ link.image }}" class="teaser img-fluid z-depth-1" style="width: 200; height: auto; object-fit: contain; max-height: 120px;">
+    <div style="width: 200px; height: 120px; display: flex; align-items: center; justify-content: center; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <img src="{{ link.image }}" class="teaser z-depth-1" style="max-width: 90%; max-height: 90%; object-fit: contain;">
+    </div>
 
     {% if link.conference_short %} 
     <abbr class="badge">{{ link.conference_short }}</abbr>

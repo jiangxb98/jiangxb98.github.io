@@ -32,26 +32,36 @@ main:
     image: ./assets/img/mwsis.png
     # notes: Poster
 
-  # - title: "MWSIS: Multimodal Weakly Supervised Instance Segmentation with 2D Box Annotations for Autonomous Driving"
-  #   authors: <strong>Guangfeng Jiang</strong>, Jun Liu, Yuzhi Wu, Wenlong Liao, Tao He, Pai Peng
-  #   conference_short: AAAI
-  #   conference: AAAI 2024 (CCF-A)
-  #   pdf: https://arxiv.org/abs/2312.06988
-  #   page: https://jiangxb98.github.io/mwsis.github.io/
-  #   image: ./assets/img/mwsis.png
+  - title: "MLF-4DRCNet: Multi-Level Fusion with 4D Radar and Camera for 3D Object Detection in Autonomous Driving"
+    authors: Yuzhi Wu, Li Xiao, Jun Liu, <strong>Guangfeng Jiang</strong>, XiangGen Xia
+    conference_short: Arxiv
+    pdf: https://arxiv.org/abs/2509.18613v1
+    image: ./assets/img/mlf4drcnet.png
 
-  # - title: "MWSIS: Multimodal Weakly Supervised Instance Segmentation with 2D Box Annotations for Autonomous Driving"
-  #   authors: <strong>Guangfeng Jiang</strong>, Jun Liu, Yuzhi Wu, Wenlong Liao, Tao He, Pai Peng
-  #   conference_short: AAAI
-  #   conference: AAAI 2024 (CCF-A)
-  #   pdf: https://arxiv.org/abs/2312.06988
-  #   page: https://jiangxb98.github.io/mwsis.github.io/
-  #   image: ./assets/img/mwsis.png
+  - title: "Mask-RadarNet: Enhancing Transformer With Spatial-Temporal Semantic Context for Radar Object Detection in Autonomous Driving"
+    authors: Yuzhi Wu, Jun Liu, <strong>Guangfeng Jiang</strong>, Weijian Liu, Danilo Orlando
+    conference_short: Arxiv
+    pdf: https://arxiv.org/abs/2412.15595
+    image: ./assets/img/maskradarnet.png
 
-  # - title: "MWSIS: Multimodal Weakly Supervised Instance Segmentation with 2D Box Annotations for Autonomous Driving"
-  #   authors: <strong>Guangfeng Jiang</strong>, Jun Liu, Yuzhi Wu, Wenlong Liao, Tao He, Pai Peng
-  #   conference_short: AAAI
-  #   conference: AAAI 2024 (CCF-A)
-  #   pdf: https://arxiv.org/abs/2312.06988
-  #   page: https://jiangxb98.github.io/mwsis.github.io/
-  #   image: ./assets/img/mwsis.png
+
+  - title: "Radar M3-Net: Multi-Scale, Multi-Layer, Multi-Frame Network With a Large Receptive Field for 3D Object Detection"
+    authors: Yunting Yang, Jun Liu, Hongsi Liu, <strong>Guangfeng Jiang</strong>
+    conference_short: ESWA
+    conference: ESWA (中科院一区)
+    pdf: https://www.sciencedirect.com/science/article/abs/pii/S0957417425011376
+    image: ./assets/img/m3net.png
+
+  - title: "MSSF: A 4D Radar and Camera Fusion Framework With Multi-Stage Sampling for 3D Object Detection in Autonomous Driving"
+    authors: Hongsi Liu, Jun Liu, <strong>Guangfeng Jiang</strong>, Xin Jin
+    conference_short: TITS
+    conference: TITS (中科院一区)
+    pdf:https://arxiv.org/pdf/2411.15016
+    image: ./assets/img/mssf.png
+
+  - title: "Spatial and Temporal Awareness Network for Semantic Segmentation on Automotive Radar Point Cloud"
+    authors: Ziwei Zhang, Jun Liu, <strong>Guangfeng Jiang</strong>
+    conference_short: TIV
+    conference: TIV (中科院一区)
+    pdf: https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=-ocVCHgAAAAJ&citation_for_view=-ocVCHgAAAAJ:9yKSN-GCB0IC
+    image: ./assets/img/stanet.png

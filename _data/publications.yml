@@ -7,6 +7,7 @@ main:
     pdf: https://arxiv.org/abs/2312.06988
     page: https://jiangxb98.github.io/mwsis.github.io/
     image: ./assets/img/mwsis.png
+    # notes: Poster
 
   - title: "EGSRAL: An Enhanced 3D Gaussian Splatting based Renderer with Automated Labeling for Large-Scale Driving Scene"
     authors: Yixiong Huo*, <strong>Guangfeng Jiang*</strong>, Hongyang Wei, Ji Liu, Song Zhang, Han Liu, Xingliang Huang, Mingjie Lu, Jinzhang Peng, Dong Li, Lu Tian, Emad Barsoum (*Equal contribution)
@@ -14,3 +15,4 @@ main:
     conference: AAAI 2025 (CCF-A)
     pdf: https://arxiv.org/abs/2412.15550
     image: ./assets/img/egsral.png
+    # notes: Poster

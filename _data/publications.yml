@@ -1,7 +1,7 @@
 main:
 
   - title: "4D Driving Scene Generation With Stereo Forcing"
-    authors: Hao Lu*, Zhuang Ma*, Guangfeng Jiang, Wenhang Ge, Bohan Li, Yuzhan Cai, Wenzhao Zheng, Yunpeng Zhang, Yingcong Chen
+    authors: Hao Lu*, Zhuang Ma*, <strong>Guangfeng Jiang</strong>, Wenhang Ge, Bohan Li, Yuzhan Cai, Wenzhao Zheng, Yunpeng Zhang, Yingcong Chen
     conference_short: Arxiv
     # conference: AAAI 2025 (CCF-A)
     pdf: https://arxiv.org/abs/2509.20251
@@ -10,7 +10,7 @@ main:
     image: ./assets/img/phigen.gif
 
   - title: "You Only Click Once: Single Point Weakly Supervised 3D Instance Segmentation for Autonomous Driving"
-    authors: Guangfeng Jiang, Jun Liu, YongXuan Lv, Yuzhi Wu, Xianfei Li, Wenlong Liao, Tao He, Pai Peng
+    authors: <strong>Guangfeng Jiang</strong>, Jun Liu, YongXuan Lv, Yuzhi Wu, Xianfei Li, Wenlong Liao, Tao He, Pai Peng
     conference_short: Arxiv
     # conference: AAAI 2025 (CCF-A)
     pdf: https://arxiv.org/abs/2502.19698

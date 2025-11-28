@@ -14,10 +14,11 @@ I am a Ph.D. student in the Department of Electronic Engineering and Information
 
 
 ## News
-- **[Sep. 2025]** Our paper 4D generation paper [PhiGenesis](https://arxiv.org/abs/2509.20251) has released.
-- **[Feb. 2025]** Our paper weakly supervised paper [YoCo](https://arxiv.org/abs/2502.19698) has released.
-- **[Dec. 2024]** Our paper [EGSRAL](https://arxiv.org/abs/2412.15550) is accepted to AAAI 2025.
-- **[Dec. 2023]** Our paper [MWSIS](https://arxiv.org/abs/2312.06988) is accepted to AAAI 2024.
+- **[Nov. 2025]** Our world model for planning paper [WPT](https://arxiv.org/abs/2511.20095) has released.
+- **[Sep. 2025]** Our 4D generation paper [PhiGenesis](https://arxiv.org/abs/2509.20251) has released.
+- **[Feb. 2025]** Our weakly supervised paper [YoCo](https://arxiv.org/abs/2502.19698) has released.
+- **[Dec. 2024]** Our 3d reconstruction paper [EGSRAL](https://arxiv.org/abs/2412.15550) is accepted to AAAI 2025.
+- **[Dec. 2023]** Our weakly supervised paper [MWSIS](https://arxiv.org/abs/2312.06988) is accepted to AAAI 2024.
 
 {% include_relative _includes/publications.md %}
 

@@ -14,6 +14,8 @@ I am a Ph.D. student in the Department of Electronic Engineering and Information
 
 
 ## News
+
+- **[Dec. 2025]** Our unified understanding, generation, and planning paper [UniUGP](https://arxiv.org/abs/2512.09864) has released.
 - **[Nov. 2025]** Our world model for planning paper [WPT](https://arxiv.org/abs/2511.20095) has released.
 - **[Sep. 2025]** Our 4D generation paper [PhiGenesis](https://arxiv.org/abs/2509.20251) has released.
 - **[Feb. 2025]** Our weakly supervised paper [YoCo](https://arxiv.org/abs/2502.19698) has released.

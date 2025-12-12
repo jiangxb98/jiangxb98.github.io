@@ -1,5 +1,12 @@
 main:
 
+  - title: "UniUGP: Unifying Understanding, Generation, and Planing For End-to-end Autonomous Driving"
+    authors: Hao Lu, Ziyang Liu, <strong>Guangfeng Jiang</strong>, Yuanfei Luo, Sheng Chen, Yangang Zhang, Ying-Cong Chen
+    conference_short: Arxiv
+    pdf: https://arxiv.org/abs/2512.09864
+    page: https://seed-uniugp.github.io/
+    image: ./assets/img/uniugp.png
+
   - title: "WPT: World-to-Policy Transfer via Online World Model Distillation"
     authors: <strong>Guangfeng Jiang</strong>, Yueru Luo, Jun Liu, Yi Huang, Yiyao Zhu, Zhan Qu, Dave Zhenyu Chen, Bingbing Liu, Xu Yan
     conference_short: Arxiv

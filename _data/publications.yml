@@ -11,6 +11,7 @@ main:
     authors: <strong>Guangfeng Jiang</strong>, Yueru Luo, Jun Liu, Yi Huang, Yiyao Zhu, Zhan Qu, Dave Zhenyu Chen, Bingbing Liu, Xu Yan
     conference_short: Arxiv
     pdf: https://arxiv.org/abs/2511.20095
+    page: https://jiangxb98.github.io/WPT/
     image: ./assets/img/wpt.png
 
   - title: "4D Driving Scene Generation With Stereo Forcing"
@@ -24,8 +25,8 @@ main:
 
   - title: "You Only Click Once: Single Point Weakly Supervised 3D Instance Segmentation for Autonomous Driving"
     authors: <strong>Guangfeng Jiang</strong>, Jun Liu, YongXuan Lv, Yuzhi Wu, Xianfei Li, Wenlong Liao, Tao He, Pai Peng
-    conference_short: Arxiv
-    # conference: AAAI 2025 (CCF-A)
+    conference_short: ESWA
+    conference: ESWA (中科院一区)
     pdf: https://arxiv.org/abs/2502.19698
     image: ./assets/img/yoco.png
     # notes: Poster

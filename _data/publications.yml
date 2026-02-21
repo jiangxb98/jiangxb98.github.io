@@ -9,7 +9,8 @@ main:
 
   - title: "WPT: World-to-Policy Transfer via Online World Model Distillation"
     authors: <strong>Guangfeng Jiang</strong>, Yueru Luo, Jun Liu, Yi Huang, Yiyao Zhu, Zhan Qu, Dave Zhenyu Chen, Bingbing Liu, Xu Yan
-    conference_short: Arxiv
+    conference_short: CVPR
+    conference: CVPR 2026 (CCF-A)
     pdf: https://arxiv.org/abs/2511.20095
     page: https://jiangxb98.github.io/WPT/
     image: ./assets/img/wpt.png

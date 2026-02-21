@@ -14,7 +14,7 @@ I am a Ph.D. student in the Department of Electronic Engineering and Information
 
 
 ## News
-
+- **[Feb. 2026]** Our paper [WPT](https://arxiv.org/abs/2511.20095), DLWM and [WorldLens](https://arxiv.org/abs/2512.10958) are accepted to CVPR 2026.
 - **[Dec. 2025]** Our unified understanding, generation, and planning paper [UniUGP](https://arxiv.org/abs/2512.09864) has released.
 - **[Nov. 2025]** Our world model for planning paper [WPT](https://arxiv.org/abs/2511.20095) has released.
 - **[Sep. 2025]** Our 4D generation paper [PhiGenesis](https://arxiv.org/abs/2509.20251) has released.
